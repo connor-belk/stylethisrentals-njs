@@ -8,7 +8,7 @@ const Footer = () => {
       {/* SOCIALS */}
       <div>
         <h3 className="text-3xl mb-3">Socialize With Us</h3>
-        <div className="flex justify-around items-between gap-3 pt-5">
+        <div className="flex gap-8 items-between pt-5">
           <Link
             href="https://www.instagram.com/stylethisrentals/"
             className="hover:scale-105 hover:text-green-300 transition-all duration-150"

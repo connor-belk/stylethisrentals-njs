@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("#fefefe");
@@ -12,18 +12,25 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor("#fefefe");
-        setTextColor("#101010");
-      } else {
-        setColor("transparent");
-        setTextColor("#fefefe");
-      }
-    };
-    window.addEventListener("scroll", changeColor);
-  }, []);
+  if (!home) {
+    useEffect(() => {
+      const changeColor = () => {
+        if (window.scrollY >= 90) {
+          setColor("#fefefe");
+          setTextColor("#101010");
+        } else {
+          setColor("transparent");
+          setTextColor("#fefefe");
+        }
+      };
+      window.addEventListener("scroll", changeColor);
+    }, []);
+  } else {
+    useEffect(() => {
+      setColor("#fefefe");
+      setTextColor("#101010");
+    }, []);
+  }
 
   return (
     <div
