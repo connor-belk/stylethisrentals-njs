@@ -11,6 +11,7 @@ const Card = ({ heading, discount, imgURL, price }) => {
           width={800}
           height={400}
           className="self-center rounded-md mb-3 max-w-full"
+          alt=""
         />
         {discount && (
           <span className="absolute top-1 right-1 rounded-3xl bg-pink-400 text-white w-fit text-center py-1 px-3">
