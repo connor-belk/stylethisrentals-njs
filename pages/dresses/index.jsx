@@ -38,6 +38,7 @@ const Dresses = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {dressesList.map((dress) => (
             <Card
+              key={dress.id}
               heading={dress.name}
               imgURL={dress.image}
               discount={dress.discount}
