@@ -12,8 +12,8 @@ const Navbar = ({ home }) => {
     setNav(!nav);
   };
 
-  if (home) {
-    useEffect(() => {
+  useEffect(() => {
+    if (home) {
       const changeColor = () => {
         if (window.scrollY >= 90) {
           setColor("#fefefe");
@@ -24,13 +24,11 @@ const Navbar = ({ home }) => {
         }
       };
       window.addEventListener("scroll", changeColor);
-    }, []);
-  } else {
-    useEffect(() => {
+    } else {
       setColor("#fefefe");
       setTextColor("#101010");
-    }, []);
-  }
+    }
+  }, []);
 
   return (
     <div
