@@ -10,3 +10,7 @@
 .custom-img {
   background-image: url("../public/assets/imgs/hero-img.jpeg");
 }
+
+html {
+  scroll-behavior: smooth;
+}

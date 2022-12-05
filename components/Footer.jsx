@@ -12,18 +12,21 @@ const Footer = () => {
           <Link
             href="https://www.instagram.com/stylethisrentals/"
             className="hover:scale-105 hover:text-green-300 transition-all duration-150"
+            target={"_blank"}
           >
             <FaInstagram size={45} />
           </Link>
           <Link
             href="https://www.facebook.com/stylethisrentals/"
             className="hover:scale-105 hover:text-green-300 transition-all duration-150"
+            target={"_blank"}
           >
             <FaFacebook size={45} />
           </Link>
           <Link
             href="https://www.tiktok.com/stylethisrentals/"
             className="hover:scale-105 hover:text-green-300 transition-all duration-150"
+            target={"_blank"}
           >
             <FaTiktok size={45} />
           </Link>
@@ -34,19 +37,19 @@ const Footer = () => {
         <h3 className="text-3xl">Site Map</h3>
         <ul>
           <li>
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#">Dresses</Link>
+            <Link href="/dresses">Dresses</Link>
           </li>
           <li>
-            <Link href="#">FAQ</Link>
+            <Link href="/FAQ">FAQ</Link>
           </li>
           <li>
-            <Link href="#">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

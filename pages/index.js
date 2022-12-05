@@ -14,7 +14,7 @@ export default function Home() {
 
       <Navbar home={true} />
 
-      <Hero heading="Gown Rentals" message="Based in Anchorage, AK" />
+      <Hero heading="Local Gown Rentals" message="Based in Anchorage, AK" />
       <FeaturedDresses season="Winter" />
     </div>
   );

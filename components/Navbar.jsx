@@ -12,7 +12,7 @@ const Navbar = ({ home }) => {
     setNav(!nav);
   };
 
-  if (!home) {
+  if (home) {
     useEffect(() => {
       const changeColor = () => {
         if (window.scrollY >= 90) {
@@ -38,7 +38,7 @@ const Navbar = ({ home }) => {
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
       <nav className="flex justify-between items-center p-5">
-        <Link href="#">
+        <Link href="/">
           <h1
             style={{ color: `${textColor}` }}
             className="font-tanmoncheri font-bold text-3xl sm:text-4xl pt-3"
@@ -51,16 +51,22 @@ const Navbar = ({ home }) => {
           className="hidden md:flex gap-6 text-xl"
         >
           <li className="hover:text-slate-200 hover:scale-105 transition-all duration-150">
-            <Link href="#">Dresses</Link>
+            <Link href="/dresses">Dresses</Link>
           </li>
           <li className="hover:text-slate-200 hover:scale-105 transition-all duration-150">
-            <Link href="#">About</Link>
+            <Link disabled href="#">
+              About
+            </Link>
           </li>
           <li className="hover:text-slate-200 hover:scale-105 transition-all duration-150">
-            <Link href="#">FAQ</Link>
+            <Link disabled href="#">
+              FAQ
+            </Link>
           </li>
           <li className="hover:text-slate-200 hover:scale-105 transition-all duration-150">
-            <Link href="#">Contact</Link>
+            <Link disabled href="#">
+              Contact
+            </Link>
           </li>
         </ul>
 
@@ -93,21 +99,24 @@ const Navbar = ({ home }) => {
               onClick={handleNav}
               className="text-[#fefefe] text-4xl py-5 hover:text-gray-500 transition-all duration-150"
             >
-              <Link href="/">Dresses</Link>
+              <Link href="/dresses">Dresses</Link>
             </li>
             <li
+              disabled
               onClick={handleNav}
               className="text-[#fefefe] text-4xl py-5 hover:text-gray-500 transition-all duration-150"
             >
               <Link href="#">FAQ</Link>
             </li>
             <li
+              disabled
               onClick={handleNav}
               className="text-[#fefefe] text-4xl py-5 hover:text-gray-500 transition-all duration-150"
             >
               <Link href="#">About</Link>
             </li>
             <li
+              disabled
               onClick={handleNav}
               className="text-[#fefefe] text-4xl py-5 hover:text-gray-500 transition-all duration-150"
             >
