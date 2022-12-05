@@ -6,7 +6,7 @@ const FeaturedDresses = ({ season }) => {
     <div className="flex flex-col justify-center items-center pt-7 mx-4 mb-10">
       <div>
         <h2 className="mb-6 text-3xl font-bold text-center">
-          {season}'s Featured Dresses
+          {season}&#39;s Featured Dresses
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
