@@ -43,6 +43,7 @@ const Dresses = () => {
               imgURL={dress.image}
               discount={dress.discount}
               price={dress.price}
+              slug={dress.slug}
             />
           ))}
         </div>

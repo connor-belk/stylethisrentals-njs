@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ heading, discount, imgURL, price }) => {
+const Card = ({ heading, discount, imgURL, price, slug }) => {
   return (
     <div className="flex flex-col shadow-md shadow-black/50 rounded-xl hover:scale-105 transition-all duration-150">
       {/* Card Image */}
@@ -25,7 +25,12 @@ const Card = ({ heading, discount, imgURL, price }) => {
         <p className="text-lg">${price}/day</p>
       </div>
       {/* Card Footer */}
-      <button className="my-4 px-12 py-2 bg-pink-400 w-fit self-center rounded-3xl text-xl">
+      <button
+        className="my-4 px-12 py-2 bg-pink-400 w-fit self-center rounded-3xl text-xl"
+        onClick={() => {
+          location.href = "/dresses/" + slug;
+        }}
+      >
         Shop Now!
       </button>
     </div>
